@@ -1,0 +1,28 @@
+# Use postgres/example user/password credentials
+version: "3"
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+
+    env_file:
+      - .env
+    volumes:
+      - myapp:/var/lib/postgresql
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmins
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+
+    ports:
+      - "8080:80"
+
+volumes:
+  myapp:
