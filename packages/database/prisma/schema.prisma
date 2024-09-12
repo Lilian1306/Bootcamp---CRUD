@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Schema.prisma
+// Devices
+model Product {
+  id          Int        @id @default(autoincrement())
+  name        String
+  description String?
+  image       String?     
+  price       Float
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  variants    Variant[]
+  collections Collection[]
+}
+
+// Features of the devices
+model Variant {
+  id          Int      @id @default(autoincrement())
+  color       String
+  capacity    String
+  price       Float
+  productId   Int
+  product     Product   @relation(fields: [productId], references: [id])
+}
+
+// Collecion we will have two collection one of highRange and the second one will be midRange
+model Collection {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String
+  products    Product[] 
+}
