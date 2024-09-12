@@ -53,6 +53,21 @@ export const getProductById = async (req: Request<{ id: string }>, res: Response
 export const createProduct = async (req: Request<{}, {}, ProductRequestBody>, res: Response): Promise<Response> => {
   const { name, price, image, description, variants = [], collections = [] } = req.body;
   try {
+    const collectionConnections = await Promise.all(
+      collections.map(async (collection) => {
+        if (collection.id) {
+          return { id: collection.id };
+        } else {
+          const newCollection = await prisma.collection.create({
+            data: {
+              name: collection.name,
+              description: collection.description,
+            },
+          });
+          return { id: newCollection.id };
+        }
+      })
+    );
     const newProduct = await prisma.product.create({
       data: {
         name,
@@ -67,9 +82,7 @@ export const createProduct = async (req: Request<{}, {}, ProductRequestBody>, re
           })),
         },
         collections: {
-          connect: collections.map((collection) => ({
-            id: collection.id,
-          })),
+          connect: collectionConnections,
         },
       },
     });
