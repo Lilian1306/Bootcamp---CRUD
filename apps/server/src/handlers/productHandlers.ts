@@ -152,7 +152,7 @@ export const deleteProduct = async (req: Request<{ id: string }>, res: Response)
     });
 
     // getting the product by his ID if the ID does not exist it will give us an error
-    if (!product) {
+    if(!product) {
       return res.status(404).json({ error: 'Product not found' });
     }
 

@@ -1,0 +1,15 @@
+// vite.config.ts
+import { defineConfig } from "file:///C:/Users/lilyt/Desktop/Tarea/typescript-fullstack-bootcamp-project/node_modules/.pnpm/vite@5.3.1_@types+node@22.5.0/node_modules/vite/dist/node/index.js";
+import viteReact from "file:///C:/Users/lilyt/Desktop/Tarea/typescript-fullstack-bootcamp-project/node_modules/.pnpm/@vitejs+plugin-react@4.3.1_vite@5.3.1_@types+node@22.5.0_/node_modules/@vitejs/plugin-react/dist/index.mjs";
+import { TanStackRouterVite } from "file:///C:/Users/lilyt/Desktop/Tarea/typescript-fullstack-bootcamp-project/node_modules/.pnpm/@tanstack+router-plugin@1.54.0_vite@5.3.1_@types+node@22.5.0_/node_modules/@tanstack/router-plugin/dist/esm/vite.js";
+var vite_config_default = defineConfig({
+  plugins: [
+    TanStackRouterVite(),
+    viteReact()
+    // ...,
+  ]
+});
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcudHMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCJDOlxcXFxVc2Vyc1xcXFxsaWx5dFxcXFxEZXNrdG9wXFxcXFRhcmVhXFxcXHR5cGVzY3JpcHQtZnVsbHN0YWNrLWJvb3RjYW1wLXByb2plY3RcXFxcYXBwc1xcXFxjbGllbnRcIjtjb25zdCBfX3ZpdGVfaW5qZWN0ZWRfb3JpZ2luYWxfZmlsZW5hbWUgPSBcIkM6XFxcXFVzZXJzXFxcXGxpbHl0XFxcXERlc2t0b3BcXFxcVGFyZWFcXFxcdHlwZXNjcmlwdC1mdWxsc3RhY2stYm9vdGNhbXAtcHJvamVjdFxcXFxhcHBzXFxcXGNsaWVudFxcXFx2aXRlLmNvbmZpZy50c1wiO2NvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9pbXBvcnRfbWV0YV91cmwgPSBcImZpbGU6Ly8vQzovVXNlcnMvbGlseXQvRGVza3RvcC9UYXJlYS90eXBlc2NyaXB0LWZ1bGxzdGFjay1ib290Y2FtcC1wcm9qZWN0L2FwcHMvY2xpZW50L3ZpdGUuY29uZmlnLnRzXCI7Ly8gdml0ZS5jb25maWcudHNcclxuaW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAndml0ZSdcclxuaW1wb3J0IHZpdGVSZWFjdCBmcm9tICdAdml0ZWpzL3BsdWdpbi1yZWFjdCdcclxuaW1wb3J0IHsgVGFuU3RhY2tSb3V0ZXJWaXRlIH0gZnJvbSAnQHRhbnN0YWNrL3JvdXRlci1wbHVnaW4vdml0ZSdcclxuXHJcbi8vIGh0dHBzOi8vdml0ZWpzLmRldi9jb25maWcvXHJcbmV4cG9ydCBkZWZhdWx0IGRlZmluZUNvbmZpZyh7XHJcbiAgcGx1Z2luczogW1xyXG4gICAgVGFuU3RhY2tSb3V0ZXJWaXRlKCksXHJcbiAgICB2aXRlUmVhY3QoKSxcclxuICAgIC8vIC4uLixcclxuICBdLFxyXG59KSJdLAogICJtYXBwaW5ncyI6ICI7QUFDQSxTQUFTLG9CQUFvQjtBQUM3QixPQUFPLGVBQWU7QUFDdEIsU0FBUywwQkFBMEI7QUFHbkMsSUFBTyxzQkFBUSxhQUFhO0FBQUEsRUFDMUIsU0FBUztBQUFBLElBQ1AsbUJBQW1CO0FBQUEsSUFDbkIsVUFBVTtBQUFBO0FBQUEsRUFFWjtBQUNGLENBQUM7IiwKICAibmFtZXMiOiBbXQp9Cg==
